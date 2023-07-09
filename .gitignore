@@ -1,0 +1,6 @@
+*.o
+cfg/*
+cfg/logs/*
+core.*
+Fanoos-Client
+*.log
