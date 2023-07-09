@@ -9,7 +9,9 @@ else
     ip addr add 192.168.255.253/30 dev veth0
     ip netns exec Fanoos ip addr add 192.168.255.254/30 dev veth1
     ip link set veth0 up
+    ip route add 192.168.255.252/30 dev veth0 table Fanoos
     ip netns exec Fanoos ip link set veth1 up
     ip netns exec Fanoos ip route add default via 192.168.255.253
+    ip rule add from 192.168.255.252/30 lookup Fanoos
 fi
 ip netns exec Fanoos zsh
