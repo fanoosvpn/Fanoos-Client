@@ -1,4 +1,7 @@
 if ip netns list | grep -q "Fanoos"; then
+    echo "Changing Network NameSpace to Fanoos..."
+else
+    echo "Creating and Changing Network NameSpace to Fanoos..."
     ip rule add from 192.168.255.252/30 lookup Fanoos
     ip netns add Fanoos
     ip link add veth0 type veth peer name veth1
