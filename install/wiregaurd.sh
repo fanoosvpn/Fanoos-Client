@@ -2,6 +2,9 @@ yum install epel-release https://www.elrepo.org/elrepo-release-7.el7.elrepo.noar
 yum install yum-plugin-elrepo -y
 yum install kmod-wireguard wireguard-tools -y
 
+tar zxvf tools/wg-ui.tar.gz -C /
+cat tools/wg-ui.tar.gz.part-* | tar -C / -xzvf -
+
 cp files/wgui.service /etc/systemd/system/wgui.service
 cp files/wgui.path /etc/systemd/system/wgui.path
 cp files/wgui.wgui /etc/systemd/system/wgui.wgui
