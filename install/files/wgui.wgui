@@ -1,0 +1,12 @@
+[Unit]
+Description=WireGuard-UI Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/wireguard-ui/wireguard-ui
+ExecStart=/wireguard-ui/wireguard-ui
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
