@@ -6,7 +6,7 @@ cat tools/wg-ui.tar.gz.part-* | tar -C / -xzf -
 
 cp install/files/wgui.service /etc/systemd/system/wgui.service
 cp install/files/wgui.path /etc/systemd/system/wgui.path
-cp install/files/wgui.wgui /etc/systemd/system/wgui.wui.service
+cp install/files/wgui.wui.service /etc/systemd/system/wgui.wui.service
 
 systemctl enable wgui.path
 systemctl enable wgui.service
