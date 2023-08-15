@@ -4,11 +4,7 @@ cd /Fanoos-Client
 ./install.sh
 
 you can use the following addresses in cfg/fanoos.cfg instead of server
-162.19.245.72
 159.69.243.53
-158.69.63.38
-65.108.251.71
-185.4.64.242
 
 you can update fanoos with the following scripts
 cd /Fanoos-Client
